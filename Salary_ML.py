@@ -92,7 +92,7 @@ def find_optimal_lm_mod(X, y, cutoffs, test_size = .30, random_state=42, plot=Tr
 
     best_cutoff = max(results, key=results.get)
 
-    #reduce X matrix
+    ###reduce X matrix
     reduce_X = X.iloc[:, np.where((X.sum() > int(best_cutoff)) == True)[0]]
     num_feats.append(reduce_X.shape[1])
 
